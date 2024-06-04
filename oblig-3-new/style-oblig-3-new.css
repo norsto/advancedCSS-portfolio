@@ -36,6 +36,7 @@ header {
   height: 100%;
   background: linear-gradient(#FFFFFF 60%, #5177A7 90%);
   margin-top: 15%;
+  margin-bottom: 10vh;
 }
 .top img {
   position: absolute;
@@ -80,11 +81,18 @@ header {
   margin-bottom: 10%;
   z-index: 1;
 }
-.waste__tractor {
-  position: static;
-  z-index: 4;
-  top: 20vh;
+.waste__image--tractor {
+  position: absolute;
+  z-index: 7;
+  top: 8vh;
+  left: 1vw;
   animation: move-tractor 25s linear infinite;
+}
+.waste__image--clouds {
+  position: absolute;
+  z-index: 4;
+  top: 2vh;
+  left: 1vw;
 }
 
 .waste p,
@@ -102,11 +110,11 @@ header {
   border-radius: 15px;
 }
 
+/*
 .clouds {
   position: absolute;
 }
 
-/*
 .tractor {
   position: absolute;
   z-index: 1;
@@ -121,9 +129,13 @@ header {
 .city__image img {
   z-index: 1;
 }
-
-.smoke {
+.city__image--smoke {
   position: absolute;
+  opacity: 90%;
+  z-index: 4;
+  top: 0.5vh;
+  right: 1vw;
+  animation: pulse 5s infinite;
 }
 
 .kid1 {
@@ -322,10 +334,10 @@ header {
     transform: scale(1.02);
   }
 }
+/*
 .smoke {
   animation: pulse 5s infinite;
-}
-
+}*/
 /*animation kid*/
 @keyframes move-needle {
   0% {
