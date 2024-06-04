@@ -14,6 +14,13 @@ section {
   scroll-snap-align: start; // only one scroll is needed to go to the next section /
 } */
 h2 {
+  font-size: 3vw;
+  font-family: "Times New Roman", Times, serif;
+  text-transform: uppercase;
+}
+
+p,
+li {
   font-size: 2vw;
 }
 
@@ -77,7 +84,6 @@ header {
   margin-left: 90px;
   padding: 10px;
   max-width: 50%;
-  font-size: 2vw;
   color: #000000;
 }
 
@@ -116,9 +122,13 @@ header {
 
 /* slide 4 */
 .brands {
-  background: linear-gradient(rgb(131, 118, 100), rgb(255, 255, 255));
+  background: linear-gradient(rgb(131, 118, 100), #FFFFFF);
   width: 100vw;
   font-size: 20px;
+  /* &__title {
+  //    font-size: 2.5vw;
+
+    }*/
 }
 .brands__list {
   padding: 5%;
@@ -127,11 +137,6 @@ header {
 .brands img {
   max-width: 20%;
   padding: 5%;
-}
-.brands__title {
-  font-size: 2.5vw;
-  font-family: "Times New Roman", Times, serif;
-  text-transform: uppercase;
 }
 
 /* slide 6 */
@@ -160,17 +165,22 @@ header {
 .actions img {
   max-width: 25%;
   max-height: 25%;
-  margin-left: 70%;
-  margin-top: 11%;
   opacity: 0;
   transition: opacity 15s ease;
 }
 
-.second-hand {
-  position: absolute;
-  left: 0;
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
+/*
+.second-hand {
+//  position: absolute;
+//  left: 0;
+  width: 10vw;
+}*/
 .animate-in {
   opacity: 1 !important;
 }
