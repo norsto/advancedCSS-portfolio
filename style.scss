@@ -1,0 +1,103 @@
+$background: #262121;
+$background2: #000000;
+$text: #fff;
+$dpink: #FF90BC;
+$lpink: #FFC0D9;
+
+
+//have a look later to see if this is set up correctly... I think either front-end oblig og idg oblig 2
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+main {
+    position: relative;
+}
+
+h1 {
+    margin: 3vw;
+}
+
+.drawing { // I think i could use before and after??
+/*    position: absolute;
+    top: 0;
+    right: 0;*/
+
+    &__top {
+        width: 12vw;
+        height: 12vw;
+        background: $dpink;
+       // background: radial-gradient($dpink 70%, $lpink 30%);
+        position: absolute;
+        border-radius: 0 0 0 90%;
+        top: 0;
+        right: 0;
+        z-index: 2;
+    
+        &--under {
+            position: absolute;
+            width: 15vw;
+            height: 15vw;
+            background: $lpink;
+            border-radius: 0 0 0 90%;
+            top: -3vw;
+            right: 0vw;
+        }
+    }
+
+    &__bottom{
+        width: 12vw;
+        height: 12vw;
+        background: $dpink;
+       // background: radial-gradient($dpink 70%, $lpink 30%);
+        position: absolute;
+        border-radius: 0 90% 0 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        &--under{
+            position: absolute;
+            width: 15vw;
+            height: 15vw;
+            background: $lpink;
+            border-radius: 0 90% 0 0;  //top left, top right, bottom right, bottom left
+            bottom: -5vw;
+            left: 0;
+        }
+    }
+
+/*
+    &__top::after {
+        content: "";
+        width: 150px;
+        height: 150px;
+        border-radius: 0 0 0 90%;
+        background: $lpink;
+        z-index: 1;
+    }*/
+}
+
+.section {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color: $text;
+    background: $background;
+    padding: 5vw 0vw 5vw 3vw;
+
+    &__div{
+        &--flex{
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+
+    &__title{
+     margin-bottom: 3vw;   
+    }
+}
+
+a {
+    color: $text;
+}

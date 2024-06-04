@@ -1,0 +1,417 @@
+/* whole page style */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden; /* the content is "clipped" */
+}
+
+/*
+html {
+  scroll-snap-type: y mandatory; // viewport of the scroll container must snap to a snap position if it isn't currently scrolled /
+}
+
+section {
+  scroll-snap-align: start; // only one scroll is needed to go to the next section /
+} */
+h2 {
+  font-size: 2vw;
+}
+
+/* slide 1 */
+header {
+  width: 100vw;
+}
+
+.top {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(#FFFFFF, 75%, #5177A7);
+}
+.top img {
+  position: absolute;
+  top: -100vh;
+  /*top: 50vh;*/
+}
+.top__title h1, .top p {
+  background: url(img/desert.svg); /* background img of the first slide */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  font-size: 6vw;
+  font-family: "Times New Roman", Times, serif;
+  text-transform: uppercase;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: #000000;
+  position: relative;
+  margin-top: 10%;
+  z-index: 3;
+}
+.top__title p {
+  font-size: 5vw;
+  margin-top: 5%;
+  margin-bottom: 25%;
+}
+
+/* slide 2 */
+.waste {
+  position: relative;
+  margin: auto;
+  width: 100vw;
+  height: 100%;
+  background: linear-gradient(#B19782 95%, rgb(131, 118, 100));
+}
+.waste__image img {
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 10%;
+}
+
+.waste p,
+.city p {
+  position: absolute;
+  z-index: 5;
+  margin-left: 90px;
+  padding: 10px;
+  max-width: 50%;
+  font-size: 2vw;
+  color: #000000;
+}
+
+.text__box {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+}
+
+.clouds {
+  position: absolute;
+}
+
+.tractor {
+  position: absolute;
+  z-index: 1;
+}
+
+/* slide 3 */
+.city {
+  width: 100vw;
+  height: 100%;
+  background: linear-gradient(rgb(131, 118, 100), #FFFFFF, rgb(131, 118, 100));
+}
+.city__image img {
+  z-index: 1;
+}
+
+.smoke {
+  position: absolute;
+}
+
+.kid1 {
+  position: absolute;
+  z-index: 5;
+}
+
+/* slide 4 */
+.brands {
+  background: linear-gradient(rgb(131, 118, 100), rgb(255, 255, 255));
+  width: 100vw;
+  font-size: 20px;
+}
+.brands__list {
+  padding: 5%;
+  text-align: center;
+}
+.brands img {
+  max-width: 20%;
+  padding: 5%;
+}
+.brands__title {
+  font-size: 2.5vw;
+  font-family: "Times New Roman", Times, serif;
+  text-transform: uppercase;
+}
+
+/* slide 6 */
+.actions {
+  background-image: linear-gradient(#A5C6F0, #FFFFFF);
+  width: 100vw;
+  font-size: 20px;
+  position: relative;
+}
+.actions__list {
+  text-align: center;
+  padding-top: 3%;
+}
+.actions__list ul {
+  text-align: start;
+  max-width: 60%;
+  font-size: 1.3vw;
+  margin-top: 4vw;
+}
+.actions__list ul li {
+  margin: 20px;
+}
+.actions__list ul li::marker {
+  content: "";
+}
+.actions img {
+  max-width: 25%;
+  max-height: 25%;
+  margin-left: 70%;
+  margin-top: 11%;
+  opacity: 0;
+  transition: opacity 15s ease;
+}
+
+.second-hand {
+  position: absolute;
+  left: 0;
+}
+
+.animate-in {
+  opacity: 1 !important;
+}
+
+/*animation clouds*/
+@keyframes drift-cloud1 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+.cloud1,
+.cloud2,
+.cloud4 {
+  animation: drift-cloud1 140s linear infinite;
+}
+
+@keyframes drift-cloud3 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+.cloud3 {
+  animation: drift-cloud3 125s linear infinite;
+}
+
+/*animation tractor*/
+@keyframes move-tractor {
+  0% {
+    transform: translateX(-50%);
+  }
+  40% {
+    transform: translateX(40px);
+  }
+  60% {
+    transform: translateX(40px);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.tractor {
+  animation: move-tractor 25s linear infinite;
+}
+
+/*animation tractor shovel*/
+@keyframes dump {
+  40% {
+    transform: rotate(0deg);
+  }
+  44% {
+    transform: rotate(40deg);
+  }
+  56% {
+    transform: rotate(40deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+}
+.shovel {
+  animation: dump 25s infinite;
+  transform-origin: 588.26px 561.81px;
+}
+
+/*animation tractor clothes*/
+@keyframes dump2 {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  40% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  44% {
+    transform: rotate(40deg);
+    opacity: 1;
+  }
+  56% {
+    transform: rotate(40deg);
+    opacity: 0;
+  }
+  60% {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+}
+.shirt-purple,
+.shirt-brown,
+.shirt-brown2,
+.shirt-green,
+.shirt-red,
+.pants-blue,
+.pants-darkblue,
+.pants-lightblue {
+  animation: dump2 25s infinite;
+  transform-origin: 588.26px 561.81px;
+}
+
+/*animation smoke*/
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+.smoke {
+  animation: pulse 5s infinite;
+}
+
+/*animation kid*/
+@keyframes move-needle {
+  0% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(3px);
+  }
+}
+.sewing-needle {
+  animation: move-needle 0.5s linear infinite alternate;
+}
+
+@keyframes sew {
+  0% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(15px);
+  }
+}
+.sewing-sweater {
+  animation: sew 4s linear infinite alternate;
+}
+
+/*animation logo
+@keyframes flip {
+  50% {
+    transform: rotateY(180deg);
+  }
+}
+
+.zara {
+  animation: flip 8s infinite;
+}
+
+@keyframes beat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.hm {
+  animation: beat 5s infinite;
+}
+
+@keyframes flip2 {
+  50% {
+    transform: rotateX(360deg);
+  }
+}
+
+.gina {
+  animation: flip2 10s infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.asos {
+  animation: spin 4s infinite;
+}
+
+@keyframes stretch {
+  0%,
+  100% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.2);
+  }
+}
+
+.mango {
+  animation: stretch 4s infinite;
+}*/
+/*
+.st0{fill:url(#SVGID_1_);}
+.st1{fill:#B09C9A;stroke:#000000;stroke-width:0.25;stroke-miterlimit:10;}
+.st2{fill:#B09C9A;}
+.st3{opacity:0.7;fill:#DF724A;stroke:#000000;stroke-miterlimit:10;}
+.st4{opacity:0.73;fill:#E7AF5F;stroke:#000000;stroke-miterlimit:10;}
+.st5{fill:url(#SVGID_00000020370422182988473210000009136767976446597791_);stroke:#000000;stroke-miterlimit:10;}
+.st6{fill:#585759;stroke:#000000;stroke-miterlimit:10;}
+.st7{fill:#B09C9A;stroke:#000000;stroke-miterlimit:10;}
+.st8{fill:#534E56;stroke:#000000;stroke-miterlimit:10;}
+.st9{fill:#B19782;stroke:#000000;stroke-miterlimit:10;}
+.st10{fill:#534F57;stroke:#000000;stroke-miterlimit:10;}
+.st11{fill:#534F57;}
+.st12{fill:#ED7872;}
+.st13{fill:#805656;}
+.st14{fill:#466F7F;} //top of the sky colour?
+.st15{fill:#759DAA;}
+.st16{fill:#CD5A9B;}
+.st17{fill:#724442;}
+.st18{fill:#1D363D;}
+.st19{fill:#577F60;}
+.st20{fill:#197665;}
+.st21{fill:#AF722A;}
+.st22{fill:#4A4747;}
+.st23{fill:#276743;}
+.st24{fill:#E9E672;}
+.st25{fill:#C97654;}
+.st26{opacity:0.78;}
+.st27{fill:#5953A3;}
+.st28{fill:#B72D2C;}
+.st29{fill:#9D9796;}
+.st30{fill:#694159;}
+.st31{opacity:0.91;}
+.st32{opacity:0.93;}
+.st33{opacity:0.94;}
+.st34{opacity:0.9;}*//*# sourceMappingURL=style-oblig-3-new.css.map */
