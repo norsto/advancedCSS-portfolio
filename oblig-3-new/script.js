@@ -1,5 +1,5 @@
 gsap.to(".rain", {
-  y: "220vh",
+  y: "190vh",
   duration: 10,
 });
 

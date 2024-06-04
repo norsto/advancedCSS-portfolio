@@ -36,15 +36,16 @@ li {
 /* slide 1 */
 header {
   width: 100vw;
-//  height: 100vh;
+  height: 70vh;
 }
 
 .top {
 //  position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 //  scroll-snap-align: start;
-  background: linear-gradient($white, 75%, $blueish);
+  background: linear-gradient($white 60%, $blueish 90%);
+  margin-top: 15%;
 
   & img {
     position: absolute; //makes clothes fall from top
@@ -91,6 +92,14 @@ header {
     position: relative; //removing the absolute position makes the tractor disappear
     object-fit: cover;
     margin-bottom: 10%;
+    z-index: 1;
+  }
+
+  &__tractor {
+    position: static; //don't know here it ends up when i put it as absolute, won't show up
+    z-index: 4;
+    top: 20vh;
+    animation: move-tractor 25s linear infinite;
   }
 }
 
@@ -113,15 +122,15 @@ header {
 .clouds {
   position: absolute;
 }
-
+/*
 .tractor {
   position: absolute;
   z-index: 1;
-}
+} */
 
 /* slide 3 */
 .city {
-//  position: relative;
+  position: relative;
 //  scroll-snap-align: start;
 //  overflow: hidden; MAKES THE IMAGES CUT WEIRD
   width: 100vw;
@@ -144,12 +153,14 @@ header {
 .kid1 {
   position: absolute;
   z-index: 5;
+  top: 1vw;
+  right: 1vw;
 }
 
 /* slide 4 */
 .brands {
-  background: linear-gradient($polluty, $white);
-//  height: 100vh;
+  background: linear-gradient($polluty 10%, $white 80%, $lblue 90%);
+  height: 100%;
   width: 100vw;
   font-size: 20px;
 
@@ -169,7 +180,7 @@ header {
   }*/
 }
 
-/* slide 6 */
+/* slide 5 */
 .actions {
   background-image: linear-gradient($lblue, $white);
 //  height: 100vh;
@@ -195,14 +206,14 @@ header {
       }
 
       & li::marker{
-        content:"";
+        content:"👕 ";
       }
     }
   }
 
   & img {
-    max-width: 25%;
-    max-height: 25%;
+    max-width: 25vw;
+    max-height: 25vw;
 //    margin-left: 70%;
 //    margin-top: 11%;
 //    position: absolute;
@@ -211,11 +222,21 @@ header {
   }
 }
 
+.conclusion p {
+  margin-left: 3vw;
+  margin-top: 10vw;
+  font-weight: bold;
+  max-width: 80%;
+  
+}
+
 .flex{
   display: flex;
 //  flex-direction: row-reverse;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
 }
 
 /*
@@ -273,10 +294,10 @@ header {
     transform: translateX(-50%);
   }
 }
-
+/*
 .tractor {
   animation: move-tractor 25s linear infinite;
-}
+}*/
 
 /*animation tractor shovel*/
 @keyframes dump {

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* whole page style */
 body {
   margin: 0;
@@ -27,12 +28,14 @@ li {
 /* slide 1 */
 header {
   width: 100vw;
+  height: 70vh;
 }
 
 .top {
   width: 100%;
-  height: 100vh;
-  background: linear-gradient(#FFFFFF, 75%, #5177A7);
+  height: 100%;
+  background: linear-gradient(#FFFFFF 60%, #5177A7 90%);
+  margin-top: 15%;
 }
 .top img {
   position: absolute;
@@ -75,6 +78,13 @@ header {
   -o-object-fit: cover;
      object-fit: cover;
   margin-bottom: 10%;
+  z-index: 1;
+}
+.waste__tractor {
+  position: static;
+  z-index: 4;
+  top: 20vh;
+  animation: move-tractor 25s linear infinite;
 }
 
 .waste p,
@@ -96,13 +106,14 @@ header {
   position: absolute;
 }
 
+/*
 .tractor {
   position: absolute;
   z-index: 1;
-}
-
+} */
 /* slide 3 */
 .city {
+  position: relative;
   width: 100vw;
   height: 100%;
   background: linear-gradient(rgb(131, 118, 100), #FFFFFF, rgb(131, 118, 100));
@@ -118,11 +129,14 @@ header {
 .kid1 {
   position: absolute;
   z-index: 5;
+  top: 1vw;
+  right: 1vw;
 }
 
 /* slide 4 */
 .brands {
-  background: linear-gradient(rgb(131, 118, 100), #FFFFFF);
+  background: linear-gradient(rgb(131, 118, 100) 10%, #FFFFFF 80%, #A5C6F0 90%);
+  height: 100%;
   width: 100vw;
   font-size: 20px;
   /* &__title {
@@ -139,7 +153,7 @@ header {
   padding: 5%;
 }
 
-/* slide 6 */
+/* slide 5 */
 .actions {
   background-image: linear-gradient(#A5C6F0, #FFFFFF);
   width: 100vw;
@@ -160,19 +174,28 @@ header {
   margin: 20px;
 }
 .actions__list ul li::marker {
-  content: "";
+  content: "👕 ";
 }
 .actions img {
-  max-width: 25%;
-  max-height: 25%;
+  max-width: 25vw;
+  max-height: 25vw;
   opacity: 0;
   transition: opacity 15s ease;
+}
+
+.conclusion p {
+  margin-left: 3vw;
+  margin-top: 10vw;
+  font-weight: bold;
+  max-width: 80%;
 }
 
 .flex {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
 }
 
 /*
@@ -227,10 +250,10 @@ header {
     transform: translateX(-50%);
   }
 }
+/*
 .tractor {
   animation: move-tractor 25s linear infinite;
-}
-
+}*/
 /*animation tractor shovel*/
 @keyframes dump {
   40% {
