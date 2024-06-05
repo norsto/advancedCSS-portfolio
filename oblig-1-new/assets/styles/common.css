@@ -108,7 +108,7 @@
 
 .card {
   max-width: 30%;
-  min-width: none;
+  min-width: 0;
   border-radius: 5px;
   margin: 10px;
   margin-left: auto;

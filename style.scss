@@ -16,7 +16,8 @@ main {
     position: relative;
 }
 
-h1 {
+h1, 
+#bigtitle {
     margin: 3vw;
     font-size: 3vw;
 }
@@ -115,4 +116,8 @@ h1 {
 
 a {
     color: $text;
+}
+
+.madeby{
+    margin-left: 10vw;
 }
