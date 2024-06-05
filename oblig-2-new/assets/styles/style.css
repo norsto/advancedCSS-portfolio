@@ -42,7 +42,7 @@ pre {
 }
 .header__text h2 {
   font-family: "marydale", sans-serif;
-  font-weight: 100%;
+  font-weight: 100;
   font-style: normal;
   font-size: 3vw;
   line-height: 1.2em;
@@ -293,7 +293,7 @@ pre {
   bottom: 55vw;
   left: 10vw;
   z-index: 7;
-  width: 6w;
+  width: 6vw;
   animation: co2-number1 1s infinite linear;
 }
 .section3__co2 .no2 {
