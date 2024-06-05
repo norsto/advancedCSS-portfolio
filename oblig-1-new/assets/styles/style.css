@@ -1,0 +1,137 @@
+.navbar__list {
+  list-style: none;
+  list-style-type: none;
+  display: flex;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f3f6f8;
+  display: flex;
+  padding: 60px;
+  align-items: center;
+  justify-content: center;
+}
+
+.left {
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  height: 400px;
+  padding: 60px;
+  background-color: #f3f9ff;
+  text-align: center;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+}
+.right__card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px #767676;
+  height: 612px;
+}
+.right__card__topbar {
+  display: flex;
+  align-items: center;
+  max-width: 400px;
+  height: auto;
+  justify-content: space-between;
+  height: 86px;
+}
+.right__card__topbar__logo__finn {
+  max-width: 40px;
+  height: 18px;
+}
+.right__card__topbar__logo__schibsted {
+  max-width: 120px;
+  height: 24px;
+}
+.right__form__titlebar {
+  max-width: 386px;
+  height: 32px;
+}
+.right__form__titlebar__heading {
+  font-size: 24px;
+}
+.right__form__input {
+  background-color: #dddddd;
+  color: #767676;
+  border: none;
+  border-bottom: 1px solid #464646;
+  font-size: 1em;
+  width: 360px;
+  height: 16px;
+  padding: 27px 12px 10px;
+  border-radius: 10px 10px 0px 0px;
+}
+.right__form__necessary {
+  margin: 5px 0px 10px 0px;
+  font-size: 0.8em;
+  color: #767676;
+}
+.right__form__button {
+  margin-top: 20px;
+}
+.right__form__button__forgot {
+  font-size: 15.2px;
+  border: none;
+  background-color: #ffffff;
+  color: #0063FB;
+  text-decoration: underline;
+  margin: 20px 0px 20px 0px;
+}
+.right__form__button__login {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #0063FB;
+  color: #ffffff;
+  font-size: 1.3em;
+  margin-top: 60px;
+  border: none;
+  width: 384px;
+  height: 13px;
+  padding: 30px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.right__form__button__login:hover {
+  background-color: #00327c;
+}
+.right__form__button__new {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  color: #0063FB;
+  font-size: 1.3em;
+  margin: 16px 0 0;
+  border: none;
+  width: 386px;
+  height: 13px;
+  padding: 30px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.right__form__button__new:hover {
+  box-shadow: 5px 5px 20px #767676;
+}
+.right__bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 16px 0;
+}
+.right__bottom__links {
+  font-size: 14px;
+  text-decoration: none;
+  align-items: center;
+  text-align: center;
+  color: #767676;
+}/*# sourceMappingURL=style.css.map */
