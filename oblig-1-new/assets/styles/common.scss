@@ -59,12 +59,9 @@ $sardine: #C3CCD9;
 //code hevily inspired by the inspected FINN.no page, but slightly freestyled
 .grid {
     display: grid;
-   //justify-content: center;
     max-width: fit-content;
     grid-template-columns: repeat(6, minmax(10.4rem,1fr));
     grid-template-rows: 2fr 2fr;
-    //padding-left: 5%;
-    //justify-self: center;
     margin-left: auto;
     margin-right: auto;
     &__link {
@@ -83,9 +80,6 @@ $sardine: #C3CCD9;
         color: $stone;
     } 
 }
-
-//tried putting the box-sizing into the upper * {, but it wouldn't do what it was supposed to do
-//AKA I wanted the searchbar to be bigger but it wouldn't form no matter what.
 
 .searchbar {
     display: flex;
@@ -119,8 +113,7 @@ $sardine: #C3CCD9;
         margin-right: auto;
         margin-left: auto;
     }
-    &__title{
-//        margin-left: 5vw;  
+    &__title{ 
         display: flex;
         flex-wrap: wrap;
     }

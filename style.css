@@ -10,22 +10,9 @@ main {
 
 h1 {
   margin: 3vw;
+  font-size: 3vw;
 }
 
-.drawing {
-  /*    position: absolute;
-      top: 0;
-      right: 0;*/
-  /*
-      &__top::after {
-          content: "";
-          width: 150px;
-          height: 150px;
-          border-radius: 0 0 0 90%;
-          background: $lpink;
-          z-index: 1;
-      }*/
-}
 .drawing__top {
   width: 12vw;
   height: 12vw;
@@ -65,19 +52,47 @@ h1 {
   left: 0;
 }
 
+.flex {
+  display: flex;
+}
+
+.title {
+  margin-left: 7.5vw;
+}
+
 .section {
   margin-top: 5%;
   margin-bottom: 5%;
   color: #fff;
   background: #262121;
-  padding: 5vw 0vw 5vw 3vw;
+  padding: 5vw;
+  border-radius: 10px;
 }
 .section__div--flex {
   display: flex;
-  justify-content: space-around;
+  margin-left: 5%;
 }
 .section__title {
   margin-bottom: 3vw;
+}
+.section__title--reflection {
+  margin-bottom: 1vw;
+}
+.section__article--new, .section__article--old {
+  margin-left: 0;
+}
+.section__article--reflection {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  max-width: 40vw;
+  margin-left: 3vw;
+}
+.section__article--article {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.section__article--article h3 {
+  margin-bottom: 0.5vw;
 }
 
 a {
