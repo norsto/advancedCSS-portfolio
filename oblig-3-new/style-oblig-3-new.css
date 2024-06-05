@@ -41,6 +41,7 @@ header {
 .top img {
   position: absolute;
   top: -100vh;
+  animation: clothing-rain 15s linear;
   /*top: 50vh;*/
 }
 .top__title h1, .top p {
@@ -220,6 +221,15 @@ header {
   opacity: 1 !important;
 }
 
+/*animation clothing rain*/
+@keyframes clothing-rain {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(190vh);
+  }
+}
 /*animation clouds*/
 @keyframes drift-cloud1 {
   0% {
@@ -363,100 +373,33 @@ header {
   animation: sew 4s linear infinite alternate;
 }
 
-/*animation logo
-@keyframes flip {
-  50% {
-    transform: rotateY(180deg);
+@media (prefers-reduced-motion) {
+  .sewing-sweater {
+    animation: sew 10s linear infinite alternate;
   }
-}
-
-.zara {
-  animation: flip 8s infinite;
-}
-
-@keyframes beat {
-  0%,
-  100% {
-    transform: scale(1);
+  .sewing-needle {
+    animation: move-needle 1.2s linear infinite alternate;
   }
-  50% {
-    transform: scale(1.1);
+  .city__image--smoke {
+    animation: pulse 15s infinite;
   }
-}
-
-.hm {
-  animation: beat 5s infinite;
-}
-
-@keyframes flip2 {
-  50% {
-    transform: rotateX(360deg);
+  .city__image--tractor {
+    animation: move-tractor 40s linear infinite;
   }
-}
-
-.gina {
-  animation: flip2 10s infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
+  .top img {
+    position: fixed;
+    top: 0;
+    animation: clothing 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    /*  animation: clothing 15s linear;*/
   }
-  100% {
-    transform: rotate(360deg);
+  @keyframes clothing {
+    0% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 0;
+    }
   }
-}
-
-.asos {
-  animation: spin 4s infinite;
-}
-
-@keyframes stretch {
-  0%,
-  100% {
-    transform: scaleX(1);
-  }
-  50% {
-    transform: scaleX(1.2);
-  }
-}
-
-.mango {
-  animation: stretch 4s infinite;
-}*/
-/*
-.st0{fill:url(#SVGID_1_);}
-.st1{fill:#B09C9A;stroke:#000000;stroke-width:0.25;stroke-miterlimit:10;}
-.st2{fill:#B09C9A;}
-.st3{opacity:0.7;fill:#DF724A;stroke:#000000;stroke-miterlimit:10;}
-.st4{opacity:0.73;fill:#E7AF5F;stroke:#000000;stroke-miterlimit:10;}
-.st5{fill:url(#SVGID_00000020370422182988473210000009136767976446597791_);stroke:#000000;stroke-miterlimit:10;}
-.st6{fill:#585759;stroke:#000000;stroke-miterlimit:10;}
-.st7{fill:#B09C9A;stroke:#000000;stroke-miterlimit:10;}
-.st8{fill:#534E56;stroke:#000000;stroke-miterlimit:10;}
-.st9{fill:#B19782;stroke:#000000;stroke-miterlimit:10;}
-.st10{fill:#534F57;stroke:#000000;stroke-miterlimit:10;}
-.st11{fill:#534F57;}
-.st12{fill:#ED7872;}
-.st13{fill:#805656;}
-.st14{fill:#466F7F;} //top of the sky colour?
-.st15{fill:#759DAA;}
-.st16{fill:#CD5A9B;}
-.st17{fill:#724442;}
-.st18{fill:#1D363D;}
-.st19{fill:#577F60;}
-.st20{fill:#197665;}
-.st21{fill:#AF722A;}
-.st22{fill:#4A4747;}
-.st23{fill:#276743;}
-.st24{fill:#E9E672;}
-.st25{fill:#C97654;}
-.st26{opacity:0.78;}
-.st27{fill:#5953A3;}
-.st28{fill:#B72D2C;}
-.st29{fill:#9D9796;}
-.st30{fill:#694159;}
-.st31{opacity:0.91;}
-.st32{opacity:0.93;}
-.st33{opacity:0.94;}
-.st34{opacity:0.9;}*//*# sourceMappingURL=style-oblig-3-new.css.map */
+}/*# sourceMappingURL=style-oblig-3-new.css.map */

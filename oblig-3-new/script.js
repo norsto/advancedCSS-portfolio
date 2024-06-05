@@ -1,7 +1,7 @@
-gsap.to(".rain", {
+/*gsap.to(".rain", {
   y: "190vh",
-  duration: 10,
-});
+  duration: 15,
+});*/
 
 gsap.to(".sweater", {
   x: 140,
