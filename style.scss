@@ -67,6 +67,7 @@ h1,
 
 .flex {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .title {
@@ -120,4 +121,46 @@ a {
 
 .madeby{
     margin-left: 10vw;
+}
+
+@media (max-width: 600px) {
+    h1, 
+    #bigtitle {
+        margin: 3%;
+        font-size: 40px;
+    }
+
+    .section {
+        &__div{            
+            &--flex{
+                display: flex;
+                margin-left: 5%;
+            }
+        }
+        &__title{
+        margin-bottom: 3%;  
+         &--reflection{
+            margin-bottom: 1%;
+         } 
+        }
+    
+        &__article{
+            &--new, &--old{
+                margin-left: 0;
+            }
+            &--reflection{
+                margin-top: 5%;
+                margin-bottom: 5%;
+                max-width: 80%;
+                margin-left: 3vw;
+            }
+            &--article{
+                margin-top: 5%;
+                margin-bottom: 5%;
+            }
+            &--article h3{
+                margin-bottom: 2vw;
+            }
+        }
+    }
 }

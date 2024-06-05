@@ -55,6 +55,7 @@ h1,
 
 .flex {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .title {
@@ -102,4 +103,38 @@ a {
 
 .madeby {
   margin-left: 10vw;
+}
+
+@media (max-width: 600px) {
+  h1,
+  #bigtitle {
+    margin: 3%;
+    font-size: 40px;
+  }
+  .section__div--flex {
+    display: flex;
+    margin-left: 5%;
+  }
+  .section__title {
+    margin-bottom: 3%;
+  }
+  .section__title--reflection {
+    margin-bottom: 1%;
+  }
+  .section__article--new, .section__article--old {
+    margin-left: 0;
+  }
+  .section__article--reflection {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    max-width: 80%;
+    margin-left: 3vw;
+  }
+  .section__article--article {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  .section__article--article h3 {
+    margin-bottom: 2vw;
+  }
 }/*# sourceMappingURL=style.css.map */
